@@ -3471,14 +3471,15 @@ GameObject:
   - component: {fileID: 7831271901661091065}
   - component: {fileID: 7831271901661091062}
   - component: {fileID: 7014022347282067683}
-  - component: {fileID: 1859607886920516239}
+  - component: {fileID: -418061947756259964}
+  - component: {fileID: 779260290598107601}
   - component: {fileID: 5789657796633131083}
   - component: {fileID: 5714601312909496985}
   - component: {fileID: 8306834405548695962}
-  - component: {fileID: -418061947756259964}
-  - component: {fileID: 779260290598107601}
   - component: {fileID: 2436558346301445795}
   - component: {fileID: -5513780554088556432}
+  - component: {fileID: -6038462036434650070}
+  - component: {fileID: 1859607886920516239}
   m_Layer: 7
   m_Name: Unit
   m_TagString: Untagged
@@ -3535,19 +3536,34 @@ MonoBehaviour:
   shootPointTransform: {fileID: 8746676663190835954}
   rifleTransform: {fileID: 7835751565657454464}
   swordTransform: {fileID: 3105493518109892021}
---- !u!65 &1859607886920516239
-BoxCollider:
+--- !u!114 &-418061947756259964
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7831271901661091064}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5650753, y: 1.7810439, z: 0.54114383}
-  m_Center: {x: 0.019861162, y: 0.8937916, z: -0.038152397}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246e4a6df177bed42999484fd8d5919e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &779260290598107601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831271901661091064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81db31bb21a91641969177d360f1cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragdolPrefab: {fileID: 7831271901661091065, guid: a1d8262382ab849459f8e45782ae4ceb,
+    type: 3}
+  originalRootBone: {fileID: 7836228790853310392}
 --- !u!114 &5789657796633131083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3590,34 +3606,6 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &-418061947756259964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7831271901661091064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246e4a6df177bed42999484fd8d5919e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
---- !u!114 &779260290598107601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7831271901661091064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b81db31bb21a91641969177d360f1cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ragdolPrefab: {fileID: 7831271901661091065, guid: a1d8262382ab849459f8e45782ae4ceb,
-    type: 3}
-  originalRootBone: {fileID: 7836228790853310392}
 --- !u!114 &2436558346301445795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3644,6 +3632,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c06de1a18d82ca4d8e02c0159103e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6038462036434650070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831271901661091064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75743b94229a63743bd72918fbbd03b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1859607886920516239
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831271901661091064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5650753, y: 1.7810439, z: 0.54114383}
+  m_Center: {x: 0.019861162, y: 0.8937916, z: -0.038152397}
 --- !u!1 &8582779642575456284
 GameObject:
   m_ObjectHideFlags: 0
