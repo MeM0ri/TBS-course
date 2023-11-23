@@ -1,0 +1,4 @@
+repository "TBS Course@BornSiberia@cloud"
+  path "/"
+    br "/main"
+    co "/main"
