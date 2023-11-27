@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDestructable
+public interface IDestructible
 {
-    void Destruct(Action onInteractComplete);
+    void Destruct();
 }

@@ -39,7 +39,7 @@ public class InteractAction : BaseAction
 
                 IInteractable interactable = LevelGrid.Instance.GetInteractableAtGredPosition(testGridPosition);
 
-                if (interactable == null) continue; //No interactable objects at cheked GridPosition
+                if (interactable == null) continue; //No interactable objects at checked GridPosition
 
                 validGridPositionList.Add(testGridPosition);
             }

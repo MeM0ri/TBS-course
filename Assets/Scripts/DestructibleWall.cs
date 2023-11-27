@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestructibleCrate : MonoBehaviour, IDestructible
+public class DestructibleWall : MonoBehaviour, IDestructible
 {
     public static event EventHandler OnAnyDestroyed;
 
-    [SerializeField] private Transform crateDestoryedPrefab;
+    [SerializeField] private Transform wallDestoryedPrefab;
 
     private GridPosition gridPosition;
 
@@ -20,9 +20,9 @@ public class DestructibleCrate : MonoBehaviour, IDestructible
 
     public void Damage()
     {
-        Transform crateDestroyedTransform = Instantiate(crateDestoryedPrefab, transform.position, transform.rotation);
+        Transform wallDestroyedTransform = Instantiate(wallDestoryedPrefab, transform.position, transform.rotation);
 
-        ApplyExplosionToChildren(crateDestroyedTransform, 150f, transform.position, 10f);
+        ApplyExplosionToChildren(wallDestroyedTransform, 250f, transform.position, 20f);
 
         Destroy(gameObject);
 
@@ -31,9 +31,9 @@ public class DestructibleCrate : MonoBehaviour, IDestructible
 
     public void Destruct()
     {
-        Transform crateDestroyedTransform = Instantiate(crateDestoryedPrefab, transform.position, transform.rotation);
+        Transform wallDestroyedTransform = Instantiate(wallDestoryedPrefab, transform.position, transform.rotation);
 
-        ApplyExplosionToChildren(crateDestroyedTransform, 150f, transform.position, 10f);
+        ApplyExplosionToChildren(wallDestroyedTransform, 150f, transform.position, 10f);
 
         Destroy(gameObject);
 

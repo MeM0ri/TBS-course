@@ -8,6 +8,7 @@ public class GridObject
     private GridPosition gridPosition;
     private List<Unit> unitList;
     private IInteractable interactable;
+    private IDestructible destructible;
 
     public GridObject(GridSystem<GridObject> gridSystem, GridPosition gridPosition)
     {
@@ -59,5 +60,12 @@ public class GridObject
     public void SetInteractable(IInteractable interactable)
     {
         this.interactable = interactable;
+    }
+
+    public IDestructible GetDestructible() => destructible;
+
+    public void SetDestructible(IDestructible destructible)
+    {
+        this.destructible = destructible;
     }
 }
